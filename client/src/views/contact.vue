@@ -1,5 +1,13 @@
 <template lang="html">
+  <div class="">
+
   <h1>Contact</h1>
+
+<p>98 Saltmarket</p>
+<p>Glasgow, United Kingdom</p>
+<p>G1 5NF</p>
+<a href="mailto:someone@yoursite.com">Email Us</a>
+</div>
 </template>
 
 <script>
