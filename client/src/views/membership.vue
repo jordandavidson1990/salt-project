@@ -12,6 +12,8 @@
 import MembersList from '@/components/MembersList.vue'
 import MemberForm from '@/components/MemberForm';
 import {eventBus} from '../main.js';
+import MemberService from '@/services/MemberService.js';
+
 export default {
   name:'membership',
   data(){

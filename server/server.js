@@ -5,12 +5,6 @@ const bodyParser = require('body-parser');
 const createRouter = require('./helpers/create_router.js');
 const MongoClient = require('mongodb').MongoClient;
 
-// const members = [
-//   {name:'Jordan', email:'jordandavidson1990@hotmail.com'},
-//   {name:'Gina', email:'gigiloughrey@gmail.com'}
-// ]
-
-
 app.use(bodyParser.json());
 app.use(cors());
 MongoClient.connect('mongodb://localhost:27017')

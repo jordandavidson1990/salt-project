@@ -1,29 +1,25 @@
 <template lang="html">
   <div class="members-list">
     <ul>
-      <li v-for="member in members">
-        <h3>{{member.name}}</h3>
-        <p>{{member.email}}</p>
-        <button type="button" name="button" @click="handleDelete">Delete</button>
-        <br>
-      </li>
+      <member-info v-for="(member, index) in members"
+      :key="index"
+      :member="member"
+      />
     </ul>
 
   </div>
 </template>
 
 <script>
+import MemberService from '@/services/MemberService.js';
+import MemberInfo from '@/components/MemberInfo';
 import {eventBus} from '../main.js'
+
 export default {
   name:'member-list',
   props:['members'],
-  methods:{
-    handleDelete(id){
-      const url = `http://localhost:3000/api/members/${id}`;
-      fetch(url, {
-        method:'DELETE'
-      }).then(() => eventBus.$emit('member-deleted', id))
-    }
+  components:{
+    "member-info" : MemberInfo
   }
 }
 </script>
