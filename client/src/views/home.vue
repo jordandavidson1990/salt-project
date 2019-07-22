@@ -3,7 +3,8 @@
     <div class="inner-container">
 
       <!-- <h1>Home</h1> -->
-      <img src="../assets/street.jpg" alt="street_view">
+      <img src="../assets/Archive/salt_space3.png" alt="street_view">
+      <div id="bottom-line"/>
     </div>
     <div class="speech">
       <p>  We are a co-operative of GSA students and graduates who operate and manage 3 spaces across the Salt Market and High Street. These spaces provide artists, makers and the wider community with a place to work, exhibit and collaborate.</p>
@@ -20,7 +21,7 @@ export default {
 
 <style lang="css" scoped>
 img{
-  width: 80vw;
+  width: 60%;
 }
 .speech{
   width: 60%;
@@ -29,10 +30,10 @@ img{
   margin-top: 2vh;
 }
 .inner-container{
-  border-bottom: 5px solid;
   width: 80%;
   margin: auto;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+}
+#bottom-line{
+  border-bottom: 3px solid;
 }
 </style>

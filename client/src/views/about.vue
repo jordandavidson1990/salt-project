@@ -10,6 +10,12 @@
     <br>
     <p>Salt Space is also a venue for creative events and activities which support the sustainability of our neighbourhood. Constitutionally, Salt Space is a co-operative founded by graduates and students from the Glasgow School of Art.</p>
   </div>
+  <div class="salt-team-images">
+
+    <img id="salt-team" src="../assets/Archive/salt-team.jpg" alt="team-photo">
+    <img id="salt-team" src="../assets/Archive/salt-shop.jpg" alt="team-photo">
+    <img id="salt-team" src="../assets/Archive/salt-claire.jpg" alt="team-photo">
+</div>
   </div>
 </template>
 
@@ -20,6 +26,16 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.salt-team-images{
+  display: flex;
+width: 80%;
+justify-content: space-between;
+margin: auto;
+}
+#salt-team{
+  width: 33%;
+  border: 2px solid;
+}
 p{
   width: 80%;
   margin: auto;

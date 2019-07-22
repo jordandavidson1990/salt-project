@@ -3,6 +3,7 @@
     <h1>Salt Space</h1>
     <br>
     <div id="nav">
+      <img id="salt-space-logo" src="./assets/Archive/salt_space2.png" alt="logo">
       <router-link :to="{ name: 'home'}">Home</router-link>
       <router-link :to="{ name: 'about'}">About</router-link>
       <router-link :to="{ name: 'latest'}">Latest</router-link>
@@ -33,7 +34,11 @@ a{
   margin: 0;
 }
 html{
-  background: #f1f1f1
+  /* background: #f1f1f1 */
+}
+
+#salt-space-logo{
+  width: 19%;
 }
 #nav{
   display: flex;
