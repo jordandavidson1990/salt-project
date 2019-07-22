@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="members-list">
-    <ul>
+    <ul class="member-list-container">
       <member-info v-for="(member, index) in members"
       :key="index"
       :member="member"
@@ -25,4 +25,15 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.member-list-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 80%;
+  justify-content: space-between;
+}
+ul{
+      padding-inline-start: 0;
+}
 </style>

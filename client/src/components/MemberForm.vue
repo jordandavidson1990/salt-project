@@ -1,12 +1,12 @@
 <template lang="html">
   <form v-on:submit.prevent="handleSubmit">
     <label for="name">Name:</label>
-    <input required type="text" name="name" v-model="name"/>
+    <input class="w3-input" required type="text" name="name" v-model="name"/>
 
     <label for="email">Email:</label>
-    <input required type="email" name="email" v-model="email"/>
+    <input class="w3-input" required type="email" name="email" v-model="email"/>
 
-    <input type="submit" value="Save"/>
+    <input class="btn btn-secondary" type="submit" value="Save"/>
 
   </form>
 </template>
@@ -43,4 +43,36 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+.w3-input{
+  width: 80%;
+  margin: auto;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin: 10px;
+width: 80vw;
+padding: 10px;
+  }
+
+  .btn-secondary{
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
 </style>

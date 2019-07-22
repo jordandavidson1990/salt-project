@@ -29,9 +29,12 @@ export default {
 a{
   text-decoration: none;
   color: black;
+  cursor: pointer;
+}
+a {
 }
 *{
-  padding: 0;
+  /* padding: 0; */
   margin: 0;
 }
 html{
@@ -49,7 +52,21 @@ html{
   padding-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
-      align-items: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+button{
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 770px) {
+  #nav{
+    display: grid;
+  }
+  #salt-space-logo{
+    width: 40%;
+    margin: auto;
+  }
 }
 
 #app {

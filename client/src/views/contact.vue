@@ -6,7 +6,7 @@
 <p>98 Saltmarket</p>
 <p>Glasgow, United Kingdom</p>
 <p>G1 5NF</p>
-<a href="mailto:someone@yoursite.com">Email Us</a>
+<a href="mailto:salt.space.glasgow@gmail.com">Email Us @salt.space.glasgow@gmail.com</a>
 </div>
 </template>
 

@@ -2,6 +2,7 @@
   <div class="">
 
   <h1>Membership</h1>
+  <p>Join our membership. It's free!</p>
   <member-form />
   <members-list :members="members"></members-list>
 </div>
