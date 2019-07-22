@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <h1>Salt Space</h1>
-    <br>
+    <!-- <h1>Salt Space</h1>
+    <br> -->
     <div id="nav">
-      <img id="salt-space-logo" src="./assets/Archive/salt_space2.png" alt="logo">
+      <img id="salt-space-logo" src="./assets/Archive/logo-profile-pic.png" alt="logo">
       <router-link :to="{ name: 'home'}">Home</router-link>
       <router-link :to="{ name: 'about'}">About</router-link>
       <router-link :to="{ name: 'latest'}">Latest</router-link>
@@ -28,13 +28,14 @@ export default {
 <style>
 a{
   text-decoration: none;
+  color: black;
 }
 *{
   padding: 0;
   margin: 0;
 }
 html{
-  /* background: #f1f1f1 */
+  background: #f1f1f1
 }
 
 #salt-space-logo{
@@ -42,12 +43,13 @@ html{
 }
 #nav{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 80%;
   border-bottom: 3px solid;
   padding-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
+      align-items: center;
 }
 
 #app {

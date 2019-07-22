@@ -3,7 +3,8 @@
     <div class="inner-container">
 
       <!-- <h1>Home</h1> -->
-      <img src="../assets/Archive/salt_space3.png" alt="street_view">
+      <img src="../assets/Archive/fb-banner-salt.png" alt="street_view">
+      <p id="co-op">A co-operative exhibition, maker & community space</p>
       <div id="bottom-line"/>
     </div>
     <div class="speech">
@@ -36,4 +37,9 @@ img{
 #bottom-line{
   border-bottom: 3px solid;
 }
+#co-op{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 5vh
+  }
 </style>
