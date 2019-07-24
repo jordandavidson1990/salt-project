@@ -6,6 +6,11 @@ const createRouter = require('./helpers/create_router.js');
 const MongoClient = require('mongodb').MongoClient;
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+
+app.post('/signup', (req, res, next) => {
+  console.log(req.body);
+})
 app.use(cors());
 MongoClient.connect('mongodb://localhost:27017')
 .then((client) => {

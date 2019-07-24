@@ -9,6 +9,7 @@
       <router-link :to="{ name: 'latest'}">Latest</router-link>
       <router-link :to="{ name: 'membership'}">Membership</router-link>
       <router-link :to="{ name: 'contact'}">Contact</router-link>
+      <router-link :to="{ name: 'signup'}">Signup</router-link>
     </div>
     <router-view/>
   </div>
@@ -16,10 +17,10 @@
 
 <script>
 
-
 export default {
   name: 'app',
   components: {
+
 
   }
 }

@@ -5,6 +5,7 @@ import About from '@/views/about.vue';
 import Latest from '@/views/latest.vue';
 import Membership from '@/views/membership.vue';
 import Contact from '@/views/contact.vue';
+import Signup from '@/views/Signup.vue';
 
 Vue.use(Router);
 
@@ -35,5 +36,10 @@ export default new Router({
       name: 'contact',
       component: Contact
     },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: Signup
+    }
   ]
 })
