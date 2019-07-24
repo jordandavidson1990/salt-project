@@ -1,5 +1,7 @@
 const express = require('express');
 const ObjectID = require('mongodb').ObjectID;
+const User = require('../models/User.js')
+const bcrypt = require('bcrypt');
 
 const createRouter = function (collection) {
 
@@ -75,6 +77,8 @@ const createRouter = function (collection) {
       res.json({ status: 500, error: err });
     });
   })
+
+
 
   return router;
 
