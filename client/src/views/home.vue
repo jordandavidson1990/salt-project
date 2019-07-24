@@ -10,6 +10,7 @@
     <div class="speech">
       <p>  We are a co-operative of GSA students and graduates who operate and manage 3 spaces across the Salt Market and High Street. These spaces provide artists, makers and the wider community with a place to work, exhibit and collaborate.</p>
     </div>
+    <div id="very-bottom-line"/>
   </div>
 
 </template>
@@ -37,6 +38,16 @@ img{
 #bottom-line{
   border-bottom: 3px solid;
 }
+
+#very-bottom-line{
+  border-bottom: 3px solid;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
 #co-op{
     width: 50%;
     margin: auto;

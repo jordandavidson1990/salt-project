@@ -31,7 +31,10 @@ a{
   color: black;
   cursor: pointer;
 }
-a {
+a :hover {
+  background: white;
+    width: 20%;
+    border-radius: 83px;
 }
 *{
   /* padding: 0; */
@@ -44,6 +47,7 @@ html{
 #salt-space-logo{
   width: 19%;
 }
+
 #nav{
   display: flex;
   justify-content: space-between;
@@ -62,6 +66,7 @@ button{
 @media only screen and (max-width: 770px) {
   #nav{
     display: grid;
+    text-align: left;
   }
   #salt-space-logo{
     width: 40%;

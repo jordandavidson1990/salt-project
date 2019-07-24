@@ -16,6 +16,7 @@
     <img id="salt-team" src="../assets/Archive/salt-shop.jpg" alt="team-photo">
     <img id="salt-team" src="../assets/Archive/salt-claire.jpg" alt="team-photo">
 </div>
+<div id="bottom-line"/>
   </div>
 </template>
 
