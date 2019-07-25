@@ -10,6 +10,7 @@
       <router-link :to="{ name: 'membership'}">Membership</router-link>
       <router-link :to="{ name: 'contact'}">Contact</router-link>
       <router-link :to="{ name: 'signup'}">Signup</router-link>
+      <router-link :to="{ name: 'login' }">Login</router-link>
     </div>
     <router-view/>
   </div>

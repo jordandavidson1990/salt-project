@@ -26,6 +26,11 @@ const createSignupsRouter = function (collection) {
       name: req.body.name,
       password: bcrypt.hashSync(req.body.password, 10)
     })
+    // collection
+    // .insertOne(newUser)
+    // .then((result) => {
+    //   res.json(result.ops[0])
+    // })
     newUser.save(err => {
       if (err) {
         return res.status(400).json({
@@ -37,7 +42,7 @@ const createSignupsRouter = function (collection) {
         title: 'signup success'
       })
     })
-  })
-  return router;
-}
+    return router;
+  }
+// }
 module.exports = createSignupsRouter;

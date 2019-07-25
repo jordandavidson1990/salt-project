@@ -10,12 +10,5 @@ db.members.insertMany([
     name:'Gina Loughrey',
     email:'gigiloughrey@gmail.com'
   }
-]);
-
-db.signups.insertMany([
-  {
-    name: 'Admin',
-    email: 'admin@admin.com',
-    password: 'admin123'
-  }
-])
+]
+);

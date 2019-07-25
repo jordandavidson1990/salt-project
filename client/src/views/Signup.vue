@@ -6,6 +6,7 @@
     Password:<input type="password" v-model="password"/>
     <br>
     <button @click="signup">Sign Up</button>
+    {{ error }}
   </div>
 </template>
 
@@ -17,7 +18,8 @@ export default {
     return{
       name:'',
       email:'',
-      password:''
+      password:'',
+      error: ''
     }
   },
   methods:{
@@ -30,8 +32,11 @@ export default {
       axios.post('http://localhost:3000/api/signups', newUser)
       .then(res => {
         console.log(res);
+        this.error = '';
+        this.$router.push('/login')
       }, err => {
         console.log(err.response)
+        this.error =  err.response.data.error
       })
     }
   }
