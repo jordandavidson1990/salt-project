@@ -3,7 +3,8 @@
 
   <h1>Admin</h1>
   <h3 v-if="name">Hello {{name}}</h3>
-  <!-- <router-link :to="{ name: 'membership' }">Members</router-link> -->
+  <router-link :to="{ name: 'signup' }">Add Admin</router-link>
+  
   <members/>
   <button @click="logout">Logout</button>
 </div>
