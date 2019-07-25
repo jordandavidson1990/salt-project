@@ -1,10 +1,11 @@
 <template lang="html">
   <div class="">
 
-  <h1>Membership</h1>
-  <p>Join our membership. It's free!</p>
-  <member-form />
+  <h3>Members</h3>
+  <p>All the members</p>
+  <!-- <member-form /> -->
   <members-list :members="members"></members-list>
+
   <div id="bottom-line"/>
 </div>
 
@@ -18,6 +19,7 @@ import MemberService from '@/services/MemberService.js';
 
 export default {
   name:'membership',
+
   data(){
     return{
       members:[]

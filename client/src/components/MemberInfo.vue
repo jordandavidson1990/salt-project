@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="individual-member">
     <h3>{{member.name}}</h3>
-    <!-- <p>{{member.email}}</p> -->
+    <p>{{member.email}}</p>
     <button class="btn btn-danger" type="button" name="button" @click="handleDelete">Delete</button>
   </div>
 </template>

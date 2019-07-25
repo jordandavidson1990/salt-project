@@ -6,7 +6,9 @@ import Latest from '@/views/latest.vue';
 import Membership from '@/views/membership.vue';
 import Contact from '@/views/contact.vue';
 import Signup from '@/views/Signup.vue';
-import Login from '@/views/Login.vue'
+import Login from '@/views/Login.vue';
+import Admin from '@/views/Admin.vue';
+import NewMember from '@/views/new-member.vue';
 
 Vue.use(Router);
 
@@ -47,6 +49,16 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: Admin
+    },
+    {
+      path: '/new-member',
+      name: 'new-member',
+      component: NewMember
     }
   ]
 })

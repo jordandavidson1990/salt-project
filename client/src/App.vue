@@ -1,29 +1,26 @@
 <template>
   <div id="app">
-    <!-- <h1>Salt Space</h1>
-    <br> -->
     <div id="nav">
       <img id="salt-space-logo" src="./assets/Archive/logo-profile-pic.png" alt="logo">
       <router-link :to="{ name: 'home'}">Home</router-link>
       <router-link :to="{ name: 'about'}">About</router-link>
       <router-link :to="{ name: 'latest'}">Latest</router-link>
-      <router-link :to="{ name: 'membership'}">Membership</router-link>
+      <router-link :to="{ name: 'new-member'}">Membership</router-link>
       <router-link :to="{ name: 'contact'}">Contact</router-link>
-      <router-link :to="{ name: 'signup'}">Signup</router-link>
-      <router-link :to="{ name: 'login' }">Login</router-link>
+      <!-- <router-link :to="{ name: 'signup'}">Signup</router-link> -->
+      <router-link :to="{ name: 'login' }">Admin</router-link>
     </div>
     <router-view/>
+
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 
 export default {
   name: 'app',
-  components: {
 
-
-  }
 }
 </script>
 

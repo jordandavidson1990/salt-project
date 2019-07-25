@@ -70,18 +70,33 @@ app.post('/login', (req, res, next) => {
   })
 })
 
+// grabbing user info
+app.get('/user', (req,res,next) =>{
+  let token = req.headers.token;
+  jwt.verify(token, 'secretkey', (err, decoded) => {
+    if (err) return res.status(401).json({
+      title: 'unathourised'
+    })
+    // token is valid
+    User.findOne({ _id : decoded.userId }, (err, user) => {
+      if (err) return console.log(err);
+      return res.status(200).json({
+        title: 'user grabbed',
+        user:{
+          email: user.email,
+           name: user.name
+        }
+      })
+    })
+  })
+})
+
 MongoClient.connect('mongodb://localhost:27017')
 .then((client) => {
   const db = client.db('salt');
-
   const members = db.collection('members');
   const membersRouter = createRouter(members);
   app.use('/api/members', membersRouter);
-
-  // const signups = db.collection('signups')
-  // const signupsRouter = createSignupsRouter(signups);
-  // app.use('/api/signups', signupsRouter);
-
 })
 .catch(console.error);
 
