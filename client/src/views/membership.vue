@@ -1,11 +1,8 @@
 <template lang="html">
   <div class="">
-
   <h3>Members</h3>
   <p>All the members</p>
-  <!-- <member-form /> -->
   <members-list :members="members"></members-list>
-
   <div id="bottom-line"/>
 </div>
 

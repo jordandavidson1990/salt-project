@@ -4,7 +4,6 @@ const cors = require('cors');
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser');
 const createRouter = require('./helpers/create_router.js');
-// const createSignupsRouter = require('./helpers/signup_router.js')
 const jwt = require('jsonwebtoken')
 const MongoClient = require('mongodb').MongoClient;
 const User = require('./models/User.js')
@@ -17,12 +16,6 @@ app.use(cors());
 
 mongoose.connect('mongodb://localhost:27017');
 
-// const app = express();
-// app.use(cors());
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: false }));
-
-//routes
 app.post('/api/signups', (req, res, next) => {
   const newUser = new User({
     email: req.body.email,

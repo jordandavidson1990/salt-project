@@ -1,8 +1,6 @@
 <template lang="html">
   <div class="container">
     <div class="inner-container">
-
-      <!-- <h1>Home</h1> -->
       <img src="../assets/Archive/fb-banner-salt.png" alt="street_view">
       <p id="co-op">A co-operative exhibition, maker & community space</p>
       <div id="bottom-line"/>

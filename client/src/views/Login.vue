@@ -1,10 +1,11 @@
 <template lang="html">
   <div class="login">
-    Email: <input type="text" v-model="email">
+    <h2>Login</h2>
+    Email/Login: <input type="text" v-model="email">
     Password: <input type="password" v-model="password">
     <br>
-    <button @click="login">Login</button>
-    {{error}}
+    <button class="btn" @click="login">Login</button>
+    <p>{{error}}</p>
 
   </div>
 </template>
@@ -18,6 +19,12 @@ export default {
       email:'',
       password: '',
       error: ''
+    }
+  },
+  created(){
+    // user is authorised
+    if (localStorage.getItem('token') !== null){
+      this.$router.push('/admin')
     }
   },
   methods:{
@@ -47,8 +54,17 @@ export default {
 .login{
   display: inline-block;
 }
+button{
+  color: #fff;
+background-color: #6c757d;
+border-color: #6c757d;
+width: 100%;
+border-radius: 1vw;
+}
 input{
   display: block;
   margin: auto;
+  width:100%;
 }
+
 </style>

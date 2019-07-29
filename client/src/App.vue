@@ -6,8 +6,8 @@
       <router-link :to="{ name: 'about'}">About</router-link>
       <router-link :to="{ name: 'latest'}">Latest</router-link>
       <router-link :to="{ name: 'new-member'}">Membership</router-link>
+      <router-link :to="{ name: 'spaces'}">Spaces</router-link>
       <router-link :to="{ name: 'contact'}">Contact</router-link>
-      <!-- <router-link :to="{ name: 'signup'}">Signup</router-link> -->
       <router-link :to="{ name: 'login' }">Admin</router-link>
     </div>
     <router-view/>
@@ -16,11 +16,9 @@
 </template>
 
 <script>
-import axios from 'axios'
 
 export default {
   name: 'app',
-
 }
 </script>
 

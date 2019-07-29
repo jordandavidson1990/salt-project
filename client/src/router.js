@@ -9,6 +9,7 @@ import Signup from '@/views/Signup.vue';
 import Login from '@/views/Login.vue';
 import Admin from '@/views/Admin.vue';
 import NewMember from '@/views/new-member.vue';
+import Spaces from '@/views/spaces/spaces.vue';
 
 Vue.use(Router);
 
@@ -59,6 +60,11 @@ export default new Router({
       path: '/new-member',
       name: 'new-member',
       component: NewMember
+    },
+    {
+      path:'/spaces',
+      name: 'spaces',
+      component: Spaces
     }
   ]
 })
