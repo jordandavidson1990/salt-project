@@ -9,6 +9,7 @@ const MongoClient = require('mongodb').MongoClient;
 const User = require('./models/User.js')
 const mongoose = require('mongoose')
 
+const secretkey = 'fdashfoiewahgiovbhafslvlaisnrwfo6657f2345834268432486324396243926429364396975dsa56fa56fa56gfa'
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -55,7 +56,7 @@ app.post('/login', (req, res, next) => {
       })
     }
     // if all good create a token and send to frontend
-    let token = jwt.sign({ userId: user._id }, 'secretkey')
+    let token = jwt.sign({ userId: user._id }, secretkey)
     return res.status(200).json({
       title: 'login success',
       token: token
@@ -66,7 +67,7 @@ app.post('/login', (req, res, next) => {
 // grabbing user info
 app.get('/user', (req,res,next) =>{
   let token = req.headers.token;
-  jwt.verify(token, 'secretkey', (err, decoded) => {
+  jwt.verify(token, secretkey, (err, decoded) => {
     if (err) return res.status(401).json({
       title: 'unathourised'
     })

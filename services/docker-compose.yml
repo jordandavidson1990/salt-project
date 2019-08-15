@@ -7,4 +7,28 @@ services:
     volumes:
       - ./client/dist/:/usr/share/nginx/html
     ports:
-      - 8080:80
+      - 80:80
+
+  mongoservice:
+    image: mongo:latest
+    container_name: "mongoservice"
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+     - ./data/db:/data/db
+    ports:
+      - 27017:27017
+    command: mongod --smallfiles
+    restart: on-failure
+
+  mongosetup:
+    image: mongo:latest
+    container_name: "mongosetup"
+    volumes:
+     - ./server/db:/seeds
+     - ./mongosetup:/mongosetup
+    command: sh /mongosetup/setup.sh
+    restart: on-failure
+    links:
+      - mongoservice
