@@ -21,14 +21,14 @@ services:
       - 27017:27017
     command: mongod --smallfiles
     restart: on-failure
-
-  mongosetup:
-    image: mongo:latest
-    container_name: "mongosetup"
-    volumes:
-     - ./server/db:/seeds
-     - ./mongosetup:/mongosetup
-    command: sh /mongosetup/setup.sh
-    restart: on-failure
-    links:
-      - mongoservice
+  #
+  # mongosetup:
+  #   image: mongo:latest
+  #   container_name: "mongosetup"
+  #   volumes:
+  #    - ./server/db:/seeds
+  #    - ./mongosetup:/mongosetup
+  #   command: sh /mongosetup/setup.sh
+  #   restart: on-failure
+  #   links:
+  #     - mongoservice
