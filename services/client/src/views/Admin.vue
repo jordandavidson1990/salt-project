@@ -33,12 +33,12 @@ export default {
       this.email = res.data.user.email;
     })
   },
-  created(){
-    // user is not authorised
-    if (localStorage.getItem('token') === null){
-      this.$router.push('/login')
-    }
-  },
+  // created(){
+  //   // user is not authorised
+  //   if (localStorage.getItem('token') === null){
+  //     this.$router.push('/login')
+  //   }
+  // },
   methods:{
     logout: function(){
       localStorage.clear();

@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="container">
     <div class="inner-container">
-      <img src="../assets/Archive/fb-banner-salt.png" alt="street_view">
+      <img class="banner-image" src="../assets/Archive/fb-banner-salt.png" alt="street_view">
       <p id="co-op">A co-operative exhibition, maker & community space</p>
       <div id="bottom-line"/>
     </div>
@@ -20,6 +20,29 @@ export default {
 </script>
 
 <style lang="css" scoped>
+@keyframes example {
+  0%   {
+    left:0px; top:0px;
+    opacity: 1;
+  }
+25%  { left:200px; top:0px;opacity: 0.4}
+50%  { left:-200px; top:10px; opacity: 0.1}
+75%  { left:200px; top:-10px;}
+100% {left:0px; top:0px;opacity: 0.9}
+
+}
+
+.banner-image{
+  animation-name: example;
+  animation-duration: 10s;
+  animation-delay: -2s;
+  position: relative;
+  animation-iteration-count: infinite;
+ animation-direction: alternate;
+}
+
+
+
 img{
   width: 60%;
 }

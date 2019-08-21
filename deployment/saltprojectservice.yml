@@ -8,6 +8,15 @@
         rsync_opts:
             - "--exclude=node_modules"
 
+    # - name: Copy frontend files across
+    #   synchronize:
+    #     src: ../services/client/dist/
+    #     dest: /home/jordan/services/client/
+    #     mode: push
+    #     recursive: true
+    #     rsync_opts:
+    #         - "--exclude=node_modules"
+
     - name: Bring up the rest of the services
       command: docker-compose up -d --build
       args:
