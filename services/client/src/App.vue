@@ -9,6 +9,7 @@
       <!-- <router-link :to="{ name: 'spaces'}">Spaces</router-link> -->
       <router-link :to="{ name: 'contact'}">Contact</router-link>
       <router-link :to="{ name: 'login' }">Admin</router-link>
+      <router-link :to="{ name: 'signup' }">Sign Up</router-link>
     </div>
     <router-view/>
 
