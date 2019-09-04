@@ -6,8 +6,8 @@ const memberSchema = new Schema({
   email: {
     unique: true,
     type: String
-})
+}})
 
-const Member = mongoose.model('User', memberSchema)
+const Member = mongoose.model('Member', memberSchema)
 
 module.exports = Member

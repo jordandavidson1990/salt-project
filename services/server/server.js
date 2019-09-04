@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(cors());
 
-mongoose.connect('mongodb://localhost:27017/signups', function(err, db){
+mongoose.connect('mongodb://mongoservice:27017/signups', function(err, db){
   if (err) {
     console.log("Unable to connect", err);
     process.exit(66)

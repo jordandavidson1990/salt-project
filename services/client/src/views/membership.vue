@@ -24,7 +24,7 @@ export default {
   },
   methods:{
     fetchData(){
-      fetch('http://localhost:3000/api/members')
+      fetch('http://mongoservice:27017/api/members')
       .then(res => res.json())
       .then(data => this.members = data);
     }
