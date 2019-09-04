@@ -2,10 +2,20 @@ version: "3.1"
 services:
 
   salt_server:
+<<<<<<< HEAD
     container_name: 'salt_server'
     ports:
       - 3000:3000
     build: ./server/
+=======
+    # image: salt_server:latest
+    container_name: 'salt-app'
+    ports:
+      - 3000:3000
+    build: ./server/
+    # links:
+    #    - mongoservice
+>>>>>>> docker
     restart: on-failure
 
   nginx:

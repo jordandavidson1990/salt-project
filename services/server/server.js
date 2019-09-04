@@ -5,17 +5,25 @@ const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser');
 const createRouter = require('./helpers/create_router.js');
 const jwt = require('jsonwebtoken')
-const MongoClient = require('mongodb').MongoClient;
+// const MongoClient = require('mongodb').MongoClient;
+const Member = require('./models/Member.js')
 const User = require('./models/User.js')
 const mongoose = require('mongoose')
 
 const secretkey = 'fdashfoiewahgiovbhafslvlaisnrwfo6657f2345834268432486324396243926429364396975dsa56fa56fa56gfa'
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(cors());
 
-mongoose.connect('mongodb://localhost:27017');
+mongoose.connect('mongodb://mongoservice:27017/signups', function(err, db){
+  if (err) {
+    console.log("Unable to connect", err);
+    process.exit(66)
+  }else{
+    console.log("connected to server successfully!");
+  }});
 
 app.post('/api/signups', (req, res, next) => {
   const newUser = new User({
@@ -85,14 +93,20 @@ app.get('/user', (req,res,next) =>{
   })
 })
 
-MongoClient.connect('mongodb://localhost:27017')
-.then((client) => {
-  const db = client.db('salt');
-  const members = db.collection('members');
-  const membersRouter = createRouter(members);
-  app.use('/api/members', membersRouter);
-})
-.catch(console.error);
+// MongoClient.connect('mongodb://mongoservice:27017', function(err, db){
+//   if (err) {
+//     console.log("Unable to connect", err);
+//     process.exit(66)
+//   }else{
+//     console.log("connected to server successfully!");
+//   })
+// .then((client) => {
+//   const db = client.db('salt');
+//   const members = db.collection('members');
+//   const membersRouter = createRouter(members);
+//   app.use('/api/members', membersRouter);
+// })
+// .catch(console.error);
 
 app.listen(3000, function(){
   console.log(`App running on port ${this.address().port}`);

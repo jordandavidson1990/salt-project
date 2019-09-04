@@ -29,7 +29,7 @@ export default {
         email: this.email,
         password: this.password
       }
-      axios.post('http://localhost:3000/api/signups', newUser)
+      axios.post('http://salt-app:3000/api/signups', newUser)
       .then(res => {
         console.log(res);
         this.error = '';

@@ -34,7 +34,7 @@ export default {
         email: this.email,
         password: this.password
       }
-      axios.post('http://localhost:3000/login', user)
+      axios.post('http://mongoservice:27017/login', user)
       .then(res => {
         // if successful
         if (res.status === 200){

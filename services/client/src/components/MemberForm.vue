@@ -24,7 +24,7 @@ export default {
   },
   methods:{
     handleSubmit(){
-      const url = "http://localhost:3000/api/members";
+      const url = "http://mongoservice:27017/api/members";
       const payload = {
         name: this.name,
         email: this.email
