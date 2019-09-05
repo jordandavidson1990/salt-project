@@ -21,8 +21,9 @@ Graduate
 Student
 £15.00 or pay in kind.
 £7.50 or pay in kind.</p>
-  <h4>Join our membership</h4>
-  <member-form/>
+  <!-- <h4>Join our membership</h4> -->
+  <!-- <member-form/> -->
+  <div id="very-bottom-line"/>
 </div>
 </template>
 
@@ -41,5 +42,14 @@ export default {
   text-align: left;
 margin: auto;
 width: 80%;
+}
+
+#very-bottom-line{
+  border-bottom: 3px solid;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
 </style>
